@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 #will hide api key and call it through an env variable
-# gem 'figaro'
+gem 'figaro'
 #connect to external apis
 gem 'httparty'
 

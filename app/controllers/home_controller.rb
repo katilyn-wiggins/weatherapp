@@ -5,6 +5,6 @@ class HomeController < ApplicationController
   end
 
   def opensky
-    @weather = Opensky.get_weather
+    @weather = Opensky.get_weather(params[:city], params[:state])
   end
 end

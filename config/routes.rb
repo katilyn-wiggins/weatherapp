@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   # get 'home/opensky'
 
-  root 'home#opensky'
+  root 'home#index'
   get 'opensky', to: 'home#opensky'
 
   # The priority is based upon order of creation: first created -> highest priority.

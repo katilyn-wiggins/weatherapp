@@ -1,7 +1,8 @@
 <div>
-  <% form_tag opensky_path, method: "get", class: "form_inline" do %>
-  <% text_field_tag :city_name, nil, class: "form-control", placeholder: "City Name" %>
-  <% submit_tag "Check Weather", name: nil, class: "btn btn-primary" %>
+  <%= form_tag opensky_path, method: "get", class: "form_inline" do %>
+  <%= text_field_tag :city, nil, class: "form-control", placeholder: "City Name" %>
+  <%= select_tag :state, options_for_select(us_states), :prompt => "Please select", class: "form-control" %>
+  <%= submit_tag "Check Weather", name: nil, class: "btn btn-primary" %>
   <% end %>
 </div>
 
@@ -11,13 +12,10 @@
   <h3><%= @weather.location %></h3>
   <p>The temperature is:
     <%= @weather.temp %></p>
+  <p>Description:
+    <%= @weather.desc %></p>
   <p>Feels like:
-    <%= @weather.temp %></p>
-
-  <p>
-    <%= @weather.temp %>
-    <%= image_tag @weather.icon %>
-  </p>
+    <%= @weather.feels_like %></p>
 </div>
 
 <% end %>

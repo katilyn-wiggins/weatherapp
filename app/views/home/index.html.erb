@@ -1,2 +1,19 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div>
+  <%= form_tag opensky_path, method: "get", class: "form_inline" do %>
+  <%= text_field_tag :city, nil, class: "form-control", placeholder: "City Name" %>
+  <%= select_tag :state, options_for_select(us_states), :prompt => "Please select", class: "form-control" %>
+  <%= submit_tag "Check Weather", name: nil, class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+
+<div>
+<% if @weather.present? %>
+  <h3><%= @weather.location %></h3>
+  <p>The temperature is:
+    <%= @weather.temp %></p>
+  <p>Feels like:
+    <%= @weather.feels_like %></p>
+</div>
+
+<% end %>
