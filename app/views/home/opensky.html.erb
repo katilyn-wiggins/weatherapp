@@ -11,11 +11,11 @@
 <% if @weather.present? %>
   <h3><%= @weather.location %></h3>
   <p>The temperature is:
-    <%= @weather.temp %></p>
-  <p>Description:
+    <%= @weather.temp %> °F</p>
+  <p>Current conditions:
     <%= @weather.desc %></p>
   <p>Feels like:
-    <%= @weather.feels_like %></p>
+    <%= @weather.feels_like %> °F</p>
 </div>
 
 <% end %>
