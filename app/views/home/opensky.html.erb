@@ -1,0 +1,23 @@
+<div>
+  <% form_tag opensky_path, method: "get", class: "form_inline" do %>
+  <% text_field_tag :city_name, nil, class: "form-control", placeholder: "City Name" %>
+  <% submit_tag "Check Weather", name: nil, class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+
+<div>
+<% if @weather.present? %>
+  <h3><%= @weather.location %></h3>
+  <p>The temperature is:
+    <%= @weather.temp %></p>
+  <p>Feels like:
+    <%= @weather.temp %></p>
+
+  <p>
+    <%= @weather.temp %>
+    <%= image_tag @weather.icon %>
+  </p>
+</div>
+
+<% end %>
