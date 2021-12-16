@@ -6,7 +6,7 @@ class Opensky
 
   base_uri 'https://api.openweathermap.org'
 
-  attr_accessor :temp, :location, :icon, :desc, :url, :feels_like
+  attr_accessor :temp, :location, :desc, :feels_like
 
   def initialize(response)
     @temp = convert_k_to_f(response['main']['temp'])

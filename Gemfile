@@ -28,6 +28,8 @@ gem 'figaro'
 #connect to external apis
 gem 'httparty'
 
+gem 'figaro'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
